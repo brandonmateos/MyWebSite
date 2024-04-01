@@ -1,6 +1,6 @@
 .containerSkills {
     position: relative;
-    max-width: 500px;
+    max-width: 700px;
     width: 100%;
     background: #ececec;
     margin: 0 15px;
@@ -8,29 +8,29 @@
     border-radius: 7px;
     margin: 0 auto;
 
-  }
-  
-  .containerSkills .skill-box {
+}
+
+.containerSkills .skill-box {
     width: 100%;
     margin: 25px 0;
-  }
-  
-  .skill-box .titleSkills {
+}
+
+.skill-box .titleSkills {
     display: block;
     font-size: 14px;
     font-weight: 600;
     color: #333;
-  }
-  
-  .skill-box .skill-bar {
+}
+
+.skill-box .skill-bar {
     height: 8px;
     width: 100%;
     border-radius: 6px;
     margin-top: 6px;
-    background: rgba(0,0,0,0.1);
-  }
-  
-  .skill-bar .skill-per {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.skill-bar .skill-per {
     position: relative;
     display: block;
     height: 100%;
@@ -39,44 +39,44 @@
     background: #4070f4;
     animation: progress 0.4s ease-in-out forwards;
     opacity: 0;
-  }
-  
-  .skill-per.html {
-     /*progreso de las diferentes lenguajes*/
-    width: 50%;
+}
+
+.skill-per.html {
+    /*progreso de las diferentes lenguajes*/
+    width: 60%;
     animation-delay: 0.1s;
-  }
-  
-  .skill-per.css {
-           /*progreso de las diferentes lenguajes*/
+}
+
+.skill-per.css {
+    /*progreso de las diferentes lenguajes*/
+    width: 40%;
+    animation-delay: 0.1s;
+}
+
+.skill-per.javascript {
+    /*progreso de las diferentes lenguajes*/
     width: 70%;
-    animation-delay: 0.1s;
-  }
-  
-  .skill-per.javascript {
-        /*progreso de las diferentes lenguajes*/
-    width: 50%;
     animation-delay: 0.2s;
-  }
-  
-  .skill-per.nodejs {
-        /*progreso de las diferentes lenguajes*/
+}
+
+.skill-per.nodejs {
+    /*progreso de las diferentes lenguajes*/
     width: 30%;
     animation-delay: 0.3s;
-  }
-  
-  @keyframes progress {
+}
+
+@keyframes progress {
     0% {
-      width: 0;
-      opacity: 1;
+        width: 0;
+        opacity: 1;
     }
-  
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  .skill-per .tooltipSkills {
+}
+
+.skill-per .tooltipSkills {
     position: absolute;
     right: -14px;
     top: -28px;
@@ -87,9 +87,9 @@
     border-radius: 3px;
     background: #4070f4;
     z-index: 1;
-  }
-  
-  .tooltip::before {
+}
+
+.tooltip::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -99,4 +99,100 @@
     z-index: -1;
     background-color: #4070f4;
     transform: translateX(-50%) rotate(45deg);
-  }
+}
+
+
+
+/*Contact with me*/
+.cardWM {
+    margin: 0 auto;
+
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainerWM {
+    width: 52px;
+    height: 52px;
+    /* border-radius: 50%;   para que sea circular*/
+    border-radius: 5px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+/* Facebook */
+.containerOne:hover {
+    background-color: #3b5998;
+    transition-duration: .3s;
+}
+
+/* LinkedIn */
+.containerTwo:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+}
+
+/* Instagram */
+.containerThree:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+}
+
+/* GitHub */
+.containerFour:hover {
+    background-color: #24292e;
+    transition-duration: .3s;
+}
+
+/* WhatsApp */
+.containerFive:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+}
+
+/* Gmail */
+.containerSix:hover {
+    background-color: #db4a39;
+    transition-duration: .3s;
+}
+
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
