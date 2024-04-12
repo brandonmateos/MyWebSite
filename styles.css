@@ -384,15 +384,24 @@
 }
 
 /*Poner en el body de fondo una imagen*/
+/* Fondo fijo para dispositivos de escritorio */
 body {
-  background-image: url("img/fondo.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-family: "Source Sans Pro", sans-serif;
-  color: #fff;
-}
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #fff;
+  }
+  
+  /* Fondo normal para dispositivos móviles */
+  @media (max-width: 767px) {
+    body {
+      background-attachment: scroll; /* Cambiar a desplazamiento normal en dispositivos móviles */
+    }
+  }
+  
 
 .navColor {
   background: #090910;
